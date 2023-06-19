@@ -5,11 +5,16 @@ using UnityEngine;
 public class ObjectHit : MonoBehaviour
 {
     
+  
     public GameObject player;
+  
+  
 
       void Start()
       {
          player = GameObject.Find("Player");
+     
+        
       }
   
     private void OnCollisionEnter(Collision other) 
@@ -17,9 +22,12 @@ public class ObjectHit : MonoBehaviour
         //change to red on collision 
         if(other.gameObject.tag == "Player" && gameObject.tag =="Untagged")
         {
-        player.GetComponent<MeshRenderer>().material.color = Color.red;
-        gameObject.tag = "hit";
+            player.GetComponent<MeshRenderer>().material.color = Color.red;
+            gameObject.tag = "hit";
+          
+                 
         }
+       
     }
 
     private void OnCollisionExit(Collision other) 
@@ -27,6 +35,7 @@ public class ObjectHit : MonoBehaviour
          if(other.gameObject.tag == "Player")
         {
         player.GetComponent<MeshRenderer>().material.color = Color.green;
+
       
         }
     }

@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class mover : MonoBehaviour
 {
- 
+   public GameObject player;
   float moveSpeed = 10f;
-  float nitro = 0f;
+  float nitro = 15f;
+  [SerializeField] float mainThrust = 100f;
   
   Rigidbody rb;
+  
+  AudioSource crash;
    
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();    
         PrintInstructions();//not passing arguments 
+  
+        player = GameObject.Find("Player");
+        crash = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -34,6 +40,26 @@ public class mover : MonoBehaviour
            
         }
        
+    }
+
+        private void OnCollisionEnter(Collision other) 
+    {
+        //change to red on collision 
+        if(other.gameObject.tag == "Untagged" )
+        {
+        player.GetComponent<MeshRenderer>().material.color = Color.red;
+       
+        
+            if(!crash.isPlaying)
+            {
+                crash.Play();
+            }       
+                 
+        }
+        else
+        {
+            crash.Stop();
+        }
     }
 
     void PrintInstructions()//no return or peram
