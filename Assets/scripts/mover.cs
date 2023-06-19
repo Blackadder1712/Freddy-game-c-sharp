@@ -5,11 +5,15 @@ using UnityEngine;
 public class mover : MonoBehaviour
 {
  
-  [SerializeField] float moveSpeed = 10f;
+  float moveSpeed = 10f;
+  float nitro = 0f;
+  
+  Rigidbody rb;
    
 
     void Start()
     {
+        rb = GetComponent<Rigidbody>();    
         PrintInstructions();//not passing arguments 
     }
 
@@ -17,6 +21,18 @@ public class mover : MonoBehaviour
     void Update()
     {
         Movement();
+        ProcessThrust();
+
+        
+        void ProcessThrust()
+        {
+            if(Input.GetKey(KeyCode.Space))
+            {
+               
+              Speed();
+            }
+           
+        }
        
     }
 
@@ -35,6 +51,17 @@ public class mover : MonoBehaviour
         transform.Translate(xValue,0, zValue);        
          //move position with controller , framerate independent at selected speed
     }
+
+    void Speed()
+    {
+         float xValue = Input.GetAxis("Horizontal")*Time.deltaTime*nitro; 
+        float zValue = Input.GetAxis("Vertical")*Time.deltaTime*nitro;
+
+        transform.Translate(xValue,0, zValue);        
+         //move position with controller , framerate independent at selected speed
+
+    }
+
 
 
   
