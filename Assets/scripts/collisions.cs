@@ -12,9 +12,6 @@ public class collisions : MonoBehaviour
             case "hit":
                 Debug.Log("You hit the wall");
                 break;
-            case "Untagged":
-                Debug.Log("You Died!");
-                break;
             case "Finish":
                 Debug.Log("You Win!");
                 break;
