@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 37
+  controlID: 16
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 38
+  controlID: 17
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 39
+  controlID: 18
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -317,21 +317,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/sounds
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/sounds
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\AmyVi\OneDrive\Desktop\c-sharp-project\Car game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ec410000
-    m_LastClickedID: 16876
+    m_SelectedIDs: e0410000
+    m_LastClickedID: 16864
     m_ExpandedIDs: 00000000d441000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -348,7 +348,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -448,7 +448,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 608
+  m_LastVerticalScrollValue: 939
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0
@@ -481,9 +481,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e24c0000
-      m_LastClickedID: 19682
-      m_ExpandedIDs: 24f4ffff62f4ffff70f4ffff6efbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 367affff26ceffff2ecfffffd6d1ffffe8d1ffff06d4ffffdcd8ffff18daffffaedaffffc0daffff3edcffff5cdcffffaadcffff08ddffffdce1ffffe0e3ffff44e7ffff58e8ffffe6f1ffffc4f5ffff2cfaffff6efbffff04f0000018f10000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -543,9 +543,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 26.163935, y: 23.029205, z: -813.1299}
+    m_Target: {x: 6.493321, y: 30.135677, z: -71.23667}
     speed: 2
-    m_Value: {x: 26.163935, y: 23.029205, z: -813.1299}
+    m_Value: {x: 6.493321, y: 30.135677, z: -71.23667}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -592,13 +592,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.0077266395, y: -0.9491076, z: 0.31399763, w: -0.02335448}
+    m_Target: {x: -0.1048075, y: 0.00030413677, z: -0.000031776162, w: -0.9944952}
     speed: 2
-    m_Value: {x: -0.007726621, y: -0.9491053, z: 0.31399688, w: -0.023354424}
+    m_Value: {x: -0.10480723, y: 0.000304136, z: -0.00003177608, w: -0.9944926}
   m_Size:
-    m_Target: 598.1724
+    m_Target: 5.82401
     speed: 2
-    m_Value: 598.1724
+    m_Value: 5.82401
   m_Ortho:
     m_Target: 0
     speed: 2

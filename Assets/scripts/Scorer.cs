@@ -5,7 +5,15 @@ using UnityEngine.SceneManagement; //restarting/loading scene
 
 public class Scorer : MonoBehaviour
 {
+    [SerializeField] float levelLoadDelay;
+     [SerializeField] AudioClip crash;
+      AudioSource dead;
     int hits = 0; //hold number of hits 
+
+    void Start()
+    {
+       dead = GetComponent<AudioSource>();   
+    }
 
     private void OnCollisionEnter(Collision other) 
     {
@@ -16,7 +24,8 @@ public class Scorer : MonoBehaviour
 
         if(hits >= 5)
         {
-            RestartLevel();
+             StartCrashSequence();// 1 sec delay
+           
         }
     }
 
@@ -25,6 +34,14 @@ public class Scorer : MonoBehaviour
         
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);//return index of current scene
+    }
+
+        void StartCrashSequence()
+    {
+       dead.PlayOneShot(crash);
+        GetComponent<mover>().enabled = false;//remove control
+         Invoke("RestartLevel", levelLoadDelay);
+
     }
 
 }
