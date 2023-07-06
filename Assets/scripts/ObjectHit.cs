@@ -22,7 +22,7 @@ public class ObjectHit : MonoBehaviour
         //change to red on collision 
         if(other.gameObject.tag == "Player" && gameObject.tag =="Untagged")
         {
-            player.GetComponent<MeshRenderer>().material.color = Color.red;
+            
             gameObject.tag = "hit";
           
                  
@@ -32,12 +32,7 @@ public class ObjectHit : MonoBehaviour
 
     private void OnCollisionExit(Collision other) 
     {
-         if(other.gameObject.tag == "Player")
-        {
-        player.GetComponent<MeshRenderer>().material.color = Color.green;
-
-      
-        }
+         
     }
 
 }

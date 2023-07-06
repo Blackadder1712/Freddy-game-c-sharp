@@ -27,13 +27,20 @@ public class room2 : MonoBehaviour
                     Debug.Log("enter2");
                     if(Time.time > waitTime)
                         {
-                            renderer.enabled = true;
-                            Body.useGravity = true;
+                          DropObject();// render and place gravuty
                         }
                 
                 }
+
+              
                 
             }
+
+               void DropObject()
+                {
+                     renderer.enabled = true;
+                     Body.useGravity = true;
+                }
 
     // Update is called once per frame
     void Update()

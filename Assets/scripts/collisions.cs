@@ -8,6 +8,11 @@ public class collisions : MonoBehaviour
     [SerializeField] AudioClip win;
    
      AudioSource complete;
+
+     
+    [SerializeField] ParticleSystem WinParticles;
+
+      bool collisionDisable = false; // turn collidors on and off 
     
     
     void Start()
@@ -51,8 +56,18 @@ public class collisions : MonoBehaviour
       void StartNextSequence()// 1 sec delay
      {
         complete.PlayOneShot(win);
+          WinParticles.Play();
         GetComponent<mover>().enabled = false;
         Invoke("NextLevel", levelLoadDelay);
+     }
+
+     void Update()
+     {
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            NextLevel();
+        }
+       
      }
 }
 

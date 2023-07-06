@@ -31,13 +31,20 @@ public class entry : MonoBehaviour
         //change to red on collision 
         if(other.gameObject.tag == "Player")
         {
-             Debug.Log("enter");
+
+            RenderObject();
+          
+        }
+        
+    }
+
+    void RenderObject()
+    {
+           Debug.Log("enter");
            renderer.enabled = true;
             Body.useGravity = true;
             rainRenderer.enabled = true;
             rBody.useGravity = true;
-        }
-        
     }
 
     // Update is called once per frame
